@@ -19,7 +19,7 @@ class ThreeJSContainer {
     }
 
     // 画面部分の作成(表示する枠ごとに)*
-    public createRendererDOM = (width: number, height: number, cameraPos: THREE.Vector3) => {
+    public createRendererDOM = (width: number, height: number,) => {
         const renderer = new THREE.WebGLRenderer();
         renderer.setSize(width, height);
         renderer.setClearColor(new THREE.Color(0x495ed));
@@ -216,6 +216,6 @@ window.addEventListener("DOMContentLoaded", init);
 function init() {
     const container = new ThreeJSContainer();
 
-    const viewport = container.createRendererDOM(640, 480, new THREE.Vector3(5, 5, 5));
+    const viewport = container.createRendererDOM(640, 480);
     document.body.appendChild(viewport);
 }
